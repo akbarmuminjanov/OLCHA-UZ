@@ -1,0 +1,75 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <button class="muddatli_tolov">0% Muddatli to'lov</button>
+        <button class="chegirma">Chegirmalar</button>
+        <h1>Sayt xaritasi</h1>
+        <h2>+998 (71) 202 2021</h2>
+        <button class="olcha_btn1">olchada soting</button>
+        <hr>
+        <div class="til">
+            <h3>Узб</h3>
+            <h3 class="til_uz">O'zb</h3>
+            <h3>Рус</h3>
+        </div>
+        <hr>
+    </nav>
+
+    <!-- Navbar2 -->
+
+    <div class="navbar2" data-spy="affix" data-offset-top="45">
+        <div class="part1">
+            <h1>olcha</h1>
+            <button class="kat_btn"><ion-icon name="menu-outline"></ion-icon> Katalog</button>
+
+            <div class="search-input">
+                <input type="text" placeholder="Katalog boyicha qidirish" class="search">
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+        </div>
+
+        <div class="part2">
+            <div class="icon1">
+                <ion-icon name="stats-chart"></ion-icon>
+                <h1>Taqqoslash</h1>
+            </div>
+            <div class="icon1">
+                <ion-icon name="heart-outline"></ion-icon>
+                <h1>Sevimlilar</h1>
+            </div>
+            <div class="icon1">
+                <ion-icon name="cart-outline"></ion-icon>
+                <p class="nol-sms">o</p>
+                <h1>Savatcha</h1>
+            </div>
+            <div class="icon1">
+                <ion-icon name="person-outline"></ion-icon>
+                <h1>Kirish</h1>
+            </div>
+        </div>
+    </div> <br> <br> <br> <br> <br> <br> <br>
+
+    <!-- Katalog uchun menu -->
+
+    
+    {% block content %}
+      
+    {% endblock content %}
+
+    
+    <script src="{% static 'js/script.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

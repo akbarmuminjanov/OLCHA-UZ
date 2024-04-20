@@ -1,0 +1,555 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* NAVBAR */
+nav{
+    align-items: center;
+    display: flex;
+    background-color: #DA002B;
+    height: 57px;
+    color: white;
+}
+nav .muddatli_tolov{
+    width: 150px;
+    font-size: 16px;
+    height: 33px;
+    border-radius: 10px;
+    border: none;
+    color: #DA002B;
+    margin-left: 35px;
+    cursor: pointer;
+}
+nav .chegirma{
+    width: 110px;
+    font-size: 16px;
+    font-weight: 600;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    height: 33px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+nav h1{
+    font-size: 17px;
+    cursor: pointer;
+    margin-left: 35px;
+}
+nav h2{
+    font-size: 23px;
+    cursor: pointer;
+    margin-left:24%;
+}
+nav .olcha_btn1{
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    height: 37px;
+    background: transparent;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-left: 25px;
+}
+nav .olcha_btn1:hover{
+    background-color: white;
+    color: #DA002B;
+}
+nav hr{
+    height: 57px;
+    margin-left: 20px;
+}
+nav .til{
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    cursor: pointer;
+}
+nav h3{
+    margin-left: 10px;
+    font-weight: 300;
+    color: rgb(240, 233, 233);
+}
+nav .til_uz{
+    font-weight: 600;
+    color: white;
+}
+
+/* NAVBAR2 */
+
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+.affix + .container-fluid {
+    padding-top: 70px;
+}
+.navbar2{
+box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    display: flex;
+    /* margin-top: 30px; */
+    align-items: center;
+    height: 100px;
+    position: sticky;
+    background-color: white;
+}
+.navbar2 .part1{
+    display: flex;
+    align-items: center;
+}
+.navbar2 .part1 h1{
+    color: #DA002B;
+    font-weight: 900;
+    font-size: 45px;
+    margin-left: 30px;
+}
+.navbar2 .part1 button{
+    align-items: center;
+    width: 170px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 25px;
+    font-size: 20px;
+    padding-left: 5%;
+    cursor: pointer;
+}
+.navbar2 .part1 button ion-icon{
+    position: absolute;
+    margin-left: -40px;
+    font-size: 30px;
+    padding-top: -40px;
+}
+.navbar2 .part1 button:hover{
+    border-color: #DA002B;
+    color: #DA002B;
+}
+.search-input{
+    margin-left: 40px;
+    margin-top: 10px;
+    align-items: center;    
+}
+.search-input input{
+    width: 560px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    font-family: monospace;
+    padding: 2%;
+    font-size: 17px;
+    background-color: rgb(237, 233, 233);
+    outline: none;
+}
+.search-input ion-icon{
+    position: absolute;
+    font-size: 13px;
+    width: 75px;
+    background-color: #DA002B;
+    color: white;
+    height: 43px;
+    border-radius: 10px;
+    margin-left: -76px;
+    cursor: pointer;
+    margin-top: 1px;
+}
+.navbar2 .part2{
+    display: flex;
+}
+.navbar2 .part2 .icon1:hover{
+    color: #DA002B;
+}
+.navbar2 .part2 .icon1{
+    text-align: center;
+    margin-left: 25px;
+    cursor: pointer;
+}
+.navbar2 .part2 .icon1 h1{
+    font-size: 15px;
+    margin-top: 5px;
+}
+.navbar2 .part2 .icon1 ion-icon{
+    font-size: 25px;
+    font-weight: 900;
+}
+.nol-sms{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #DA002B;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: -30px;
+    margin-left: 39px;
+    z-index: 999;
+    position: absolute;
+    padding-right: 1px;
+    padding-top: 1px; 
+}
+/* Katalog uchun */
+
+.katalog{
+    margin-top: -100px;
+    /* display: flex; */
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    background-color: white;
+}
+.katalog .part1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 19px;
+    height: 300px;
+    overflow: scroll;
+    margin-left: 30px;
+    width: 300px;
+}
+.katalog .part1 a{
+    color: black;
+    width: 250px;
+    height: 100px;
+    padding: 1%;
+    margin: 1%;
+    align-items: center;
+    font-weight: 300;
+    border-radius: 10px;
+}
+.katalog .part1 a:hover{
+    background-color: rgb(231, 221, 221);
+    color: #DA002B;
+}
+.katalog .part2{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10px;
+    font-size: 19px;
+    /* width: 100%; */
+    height: 300px;
+    overflow: scroll;
+    margin-left: 360px;
+    margin-top: -300px;
+}
+.katalog .part2 a{
+    color: black;
+    width: 300px;
+    height: 50px;
+    padding: 0.5%;
+    align-items: center;
+    font-weight: 300;
+    border-radius: 10px;
+}
+.kat_tel{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+.katalog .part2 a:hover{
+    color: #DA002B;
+}
+.katalog p{
+    font-weight: 700;
+}
+.katalog button{
+    width: 30px;
+    height: 30px;
+    background: #DA002B;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    /* margin-left: 50px; */
+    cursor: pointer;
+}
+
+/* Main uchun */
+
+.main{
+    display: flex;
+    /* margin-top: 50px; */
+    margin-top: -100px;
+}
+.main .part1 img{
+    width: 90%;
+    height: 100%;
+    cursor: pointer;
+    margin-left: 30px;
+    border-radius: 15px;
+}
+.main .part2 p{
+    width: 150px;
+    height: 23px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+    background-color: #DA002B;
+    border: 1px solid;
+    margin-right: 10px;
+}
+.main .part2{
+    margin-right: 50px;
+    width: 50%;
+    height: 400px;
+    cursor: pointer;
+    border: 3px solid #DA002B;
+    position: static;
+    border-radius: 10px;
+}
+.main .part2 img{
+    width: 80%;
+    padding-left: 60px;
+    text-align: center;
+    padding-top: 20px;
+}
+.main .part2 h1{
+    font-size: 20px;
+    padding-top: 15px;
+    padding-left: 15px;
+    display: flex;
+}
+.main .part2 h1 font{
+    width: 35px;
+    height: 35px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-weight: 300;
+}
+.main .part2 h2{
+    font-size: 15px;
+    width: 50px;
+    height: 25px;
+    background-color: #DA002B;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 5px;
+    padding-top: 4px;
+    padding-left: 6px;
+    font-weight: 300;
+    color: white;
+    border-radius: 7px;
+}
+.main .part2 h3{
+    font-weight: 300;
+    font-size: 20px;
+    padding-left: 15px;
+    margin-top: 25px;
+}
+.main .part2 h4{
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 15px;
+    margin-top: 15px;
+    color: #DA002B;
+}
+.main .part2 h4 font{
+    text-decoration: line-through;
+    color: gray;
+    font-size: 17px;
+    margin-left: 5px;
+    font-weight: 300;
+}
+.main .part2 h5{
+    margin-left: 15px;
+    margin-top: 20px;
+    font-size: 17px;
+    background-color: rgb(255, 196, 0);
+    border-radius: 4px;
+    width: 180px;
+    height: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* Slayd uchun */
+
+.slayd{
+    display: flex;
+    margin-top: 60px;
+}
+.slayd .part1{
+    margin-left: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+.slayd .part1 img{
+    width: 120px;
+    transition: 0.2s;
+    position: absolute;
+    margin-left: -60px;
+}
+.slayd .part1 img:hover{
+    width: 123px;
+}
+.slayd .part1 h1{
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 125px;
+    margin-left: 5px;
+    transition: 0.1s;
+}
+.slayd .part1 h1:hover{
+    color: #DA002B;
+}
+.slayd2 img{
+    margin-top: 40px;
+    width: 30%;
+    margin-left: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    position: absolute;
+}
+.chegrima-img{
+    margin-top: 170px;
+}
+.chegrima-img img{
+    width: 95%;
+    height: 50%;
+    margin-left: 30px;
+    border-radius: 15px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.chegrima-img img:hover{
+    width: 95.5%;
+    height: 50.5%;
+}
+.slayd3 img{
+    margin-top: 40px;
+    width: 30%;
+    margin-left: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: absolute;
+}
+.slayd4{
+    display: flex;
+    margin-top: 200px;
+}
+.slayd4 img{
+    margin-left: 30px;
+    border-radius: 15px;
+    width: 46%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.slayd4 img:hover{
+    width: 47%;
+}
+.slayd2 img:hover{
+    width: 31%;
+}
+.slayd3 img:hover{
+    width: 31%;
+}
+
+
+/* Mahsulot uchun */
+
+.mahsulot{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.mahsulot .part1 img{
+    border-radius: 15px;
+    cursor: pointer;
+    width: 80%;
+    height: 100%;
+}
+.mahsulot .mahsulot-part{
+    display: flex;
+}
+.mahsulot .mahsulot-part .block1 img{
+    width: 75%;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.mahsulot .block1 .rasm1{
+    display: flex;
+}
+.mahsulot .block1{
+    margin-left: 20px;
+}
+.mahsulot .block1 .rasm1 .mah-icon{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.mahsulot .block1 .rasm1 .mah-icon ion-icon{
+    font-size: 27px;
+    color: gray;
+    cursor: pointer;
+    cursor: pointer;
+}
+.mahsulot .block1 h1{
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-left: -5px;
+}
+.mahsulot .block1 h2{
+    font-size: 20px;
+    font-family: monospace;
+    cursor: pointer;
+    margin-left: -5px;
+    margin-top: 30px;
+}
+.mahsulot .block1 h3{
+    cursor: pointer;
+    font-size: 17px;
+    margin-left: -5px;
+    font-weight: 300;
+    width: 180px;
+    background-color: rgb(255, 196, 0);
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: -5px;
+}
+.mahsulot .mah-btn{
+    align-items: center;
+    margin-left: -5px;
+    margin-top: 30px;
+}
+.cart-btn{
+    width: 40px;
+    cursor: pointer;
+    height: 40px;
+    background: transparent;
+    border: 2px solid;
+    border-radius: 10px;
+}
+.cart-btn ion-icon{
+    font-size: 25px;
+}
+.tolov-btn{
+    cursor: pointer;
+    width: 190px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 2px solid #DA002B;
+    background: transparent;
+    color: #DA002B;
+    font-size: 17px;
+    font-family: monospace;
+    /* margin-bottom: 50px; */
+    position: absolute;
+}
