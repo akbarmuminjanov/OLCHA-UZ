@@ -162,7 +162,7 @@
                 {% for product in products %}
                 <div class="block1">
                     <div class="rasm1">
-                        <a href="">
+                        <a href="{{ product.get_absolute_url }}">
                             {% for picture in product.productimage_set.all  %}
                             {% if picture == product.productimage_set.all.first %}
                             <img src="{% if picture.image %}{{picture.image.url}}{% else %}{% static 'img/no_image.webp' %}{% endif %}" alt="">
