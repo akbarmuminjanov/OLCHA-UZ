@@ -1,3 +1,4 @@
+{% extends "base.html" %}
 {% load static %}
 
 {% block content %}
@@ -161,7 +162,7 @@
                 {% for product in products %}
                 <div class="block1">
                     <div class="rasm1">
-                        <a href="{{ product.get_absolute_url }}">
+                        <a href="">
                             {% for picture in product.productimage_set.all  %}
                             {% if picture == product.productimage_set.all.first %}
                             <img src="{% if picture.image %}{{picture.image.url}}{% else %}{% static 'img/no_image.webp' %}{% endif %}" alt="">
@@ -173,9 +174,9 @@
                         <ion-icon name="stats-chart"></ion-icon>
                         </div>
                     </div>
-                    <h1>Apple iPhone 14 Pro Max</h1>
-                    <h2>17 689 000 so'm</h2>
-                    <h3>1 672 000 so'm x 12</h3>
+                    <h1>{{ product.name }}</h1>
+                    <h2>{{ product.price }}so'm</h2>
+                    <h3>{{ product.credit }}so'm x 12</h3>
                    <div class="mah-btn">
                     <button class="cart-btn"><ion-icon name="cart-outline"></ion-icon></button>
                     <button class="tolov-btn">Muddatli to'lov</button>
@@ -186,29 +187,6 @@
             </div>
 
             <br><br>
-
-            <div class="mahsulot-part">
-
-                
-
-                <div class="block1">
-                    <div class="rasm1">
-                        <img src="mahsulot/a33.jpeg" alt="">
-                        <div class="mah-icon">
-                            <ion-icon name="heart-outline" class="layk-button"></ion-icon>
-                        <ion-icon name="stats-chart"></ion-icon>
-                        </div>
-                    </div>
-                    <h1>Samsung Gallaxy A33 5G</h1>
-                    <h2>3 535 000 so'm</h2>
-                    <h3>358 000 so'm x 12</h3>
-                   <div class="mah-btn">
-                    <button class="cart-btn"><ion-icon name="cart-outline"></ion-icon></button>
-                    <button class="tolov-btn">Muddatli to'lov</button>
-                   </div>
-                </div>
-
-            </div>
         </div>
         </div>
 {% endblock content %}
