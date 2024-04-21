@@ -1,61 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+{% endblock css %}
+
 {% block content %}
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg-5">
-    
-            {% with total_items=cart|length %}
-                {% if cart|length > 0 %}
-                    <h4 class="mt-3 mb-3 d-flex justify-content-between align-items-center mb-3">
-                        Корзина <span class="badge badge-secondary badge-pill">{{ total_items }} item{{ total_items|pluralize }} 
-
-                        </span>
-                    </h4>
-                        {% else %}
-                        <h4>
-                            Your cart is empty.
-                        </h4>
-                {% endif %}
-            {% endwith %}
-        {% for item in cart %}
-            {% with product=item.product %}
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">{{ product.name }}</h5>
-                    <p class="card-text">{{ product.description }}</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item bg-light">
-                        <div class="row text-center">
-                            <div class="col-lg-4">
-                                {{ item.quantity }}
-                            </div>
-                            <div class="col-lg-4">{{ item.price }} so'm</div>
-                            <div class="col-lg-4">
-                                <a href="{% url 'cart_remove' product.id %}">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            {% endwith %}
-        {% endfor %}
-            <div class="card mb-3">
-                <div class="card-footer">
-                    <p class="float-left">Итого</p>
-                    <h4 class="float-right">{{ cart.get_total_price }} so'm</h4>
-                </div>
-            </div>
-            <p class="text-right">
-                <a href="{% url 'index' %}" class="button light">Continue shopping</a>
-            </p>
-            <a class="btn btn-success btn-lg float-right" href="">
-                Оформить заказ
-            </a>
-        </div>
-    </div>
+  
+<div class="cart-form__cart-section cart-section">
+	<div class="cart-section__header"><h2 class="h2">В корзине 1 товара</h2></div>
+	<div class="cart-section__body">
+		<ul class="cart-section__list">
+			<li>
+				<div data-v-bbaff1d9="" class="cart-section__item">
+					<div data-v-bbaff1d9="" class="cart-section__item-image">
+						<!---->
+						<img data-v-bbaff1d9="" src="https://olcha.uz/image/original/products/supplier/stores/1/2024-01-12/dUNS0h6Nb393UYANbT6fVUnBcJyh5JKkQDV6bENrX7gdllN4sDXsWSjBIcfc.jpg" alt="Xiaomi Redmi Note 13 Blue 8/128 GB" />
+					</div>
+					<div data-v-bbaff1d9="" class="cart-section__item-content">
+						<div data-v-bbaff1d9="" class="cart-section__item-info">
+							<div data-v-bbaff1d9="" class="cart-section__item-name">
+								<a data-v-bbaff1d9="" href="/ru/product/view/xiaomi-redmi-note-13-blue-8128-gb" class="" aria-label="xiaomi-redmi-note-13-blue-8128-gb">Xiaomi Redmi Note 13 Blue 8/128 GB</a>
+							</div>
+							<div data-v-bbaff1d9="" class="cart-section__item-vendor-code">STP-Group</div>
+							<!---->
+							<div data-v-bbaff1d9="" class="cart-section__item-actions"><button data-v-bbaff1d9="" type="button">В избранное</button><button data-v-bbaff1d9="" type="button">Удалить</button></div>
+						</div>
+						<div data-v-11d5ccc8="" class="cart-section__item-count">
+							<div data-v-11d5ccc8="" class="count">
+								<button data-v-11d5ccc8="" type="button" class="count__btn _decrease"><img data-v-11d5ccc8="" src="https://olcha.uz/_nuxt/icon-minus.a6c3f125.svg" alt="decrement" width="20" height="20" /></button>
+								<input data-v-11d5ccc8="" type="text" class="input" />
+								<button data-v-11d5ccc8="" type="button" class="count__btn _increase"><img data-v-11d5ccc8="" src="https://olcha.uz/_nuxt/icon-plus.49454ada.svg" alt="increment" width="20" height="20" /></button>
+							</div>
+							<!---->
+							<div data-v-11d5ccc8="" class="cart-actions">
+								<button data-v-11d5ccc8="" type="button" class="product-card__actions-item _like" style="color: unset; margin-bottom: 0px;">
+									<svg data-v-11d5ccc8="" class="icon icon__like" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: unset;">
+										<path
+											data-v-11d5ccc8=""
+											d="M21.2913 4.61183C20.7805 4.10083 20.1741 3.69547 19.5066 3.41891C18.8392 3.14235 18.1238 3 17.4013 3C16.6788 3 15.9634 3.14235 15.2959 3.41891C14.6285 3.69547 14.022 4.10083 13.5113 4.61183L12.4513 5.67183L11.3913 4.61183C10.3596 3.58013 8.96032 3.00053 7.50129 3.00053C6.04226 3.00053 4.64298 3.58013 3.61129 4.61183C2.5796 5.64352 2 7.04279 2 8.50183C2 9.96086 2.5796 11.3601 3.61129 12.3918L4.67129 13.4518L12.4513 21.2318L20.2313 13.4518L21.2913 12.3918C21.8023 11.8811 22.2076 11.2746 22.4842 10.6072C22.7608 9.93972 22.9031 9.22431 22.9031 8.50183C22.9031 7.77934 22.7608 7.06393 22.4842 6.39647C22.2076 5.72901 21.8023 5.12258 21.2913 4.61183V4.61183Z"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+									</svg>
+								</button>
+								<button data-v-11d5ccc8="" type="button">
+									<svg data-v-11d5ccc8="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20">
+										<path
+											data-v-11d5ccc8=""
+											d="M7 16C7.26522 16 7.51957 15.8946 7.70711 15.7071C7.89464 15.5196 8 15.2652 8 15V9C8 8.73478 7.89464 8.48043 7.70711 8.29289C7.51957 8.10536 7.26522 8 7 8C6.73478 8 6.48043 8.10536 6.29289 8.29289C6.10536 8.48043 6 8.73478 6 9V15C6 15.2652 6.10536 15.5196 6.29289 15.7071C6.48043 15.8946 6.73478 16 7 16ZM17 4H13V3C13 2.20435 12.6839 1.44129 12.1213 0.87868C11.5587 0.316071 10.7956 0 10 0H8C7.20435 0 6.44129 0.316071 5.87868 0.87868C5.31607 1.44129 5 2.20435 5 3V4H1C0.734784 4 0.48043 4.10536 0.292893 4.29289C0.105357 4.48043 0 4.73478 0 5C0 5.26522 0.105357 5.51957 0.292893 5.70711C0.48043 5.89464 0.734784 6 1 6H2V17C2 17.7956 2.31607 18.5587 2.87868 19.1213C3.44129 19.6839 4.20435 20 5 20H13C13.7956 20 14.5587 19.6839 15.1213 19.1213C15.6839 18.5587 16 17.7956 16 17V6H17C17.2652 6 17.5196 5.89464 17.7071 5.70711C17.8946 5.51957 18 5.26522 18 5C18 4.73478 17.8946 4.48043 17.7071 4.29289C17.5196 4.10536 17.2652 4 17 4ZM7 3C7 2.73478 7.10536 2.48043 7.29289 2.29289C7.48043 2.10536 7.73478 2 8 2H10C10.2652 2 10.5196 2.10536 10.7071 2.29289C10.8946 2.48043 11 2.73478 11 3V4H7V3ZM14 17C14 17.2652 13.8946 17.5196 13.7071 17.7071C13.5196 17.8946 13.2652 18 13 18H5C4.73478 18 4.48043 17.8946 4.29289 17.7071C4.10536 17.5196 4 17.2652 4 17V6H14V17ZM11 16C11.2652 16 11.5196 15.8946 11.7071 15.7071C11.8946 15.5196 12 15.2652 12 15V9C12 8.73478 11.8946 8.48043 11.7071 8.29289C11.5196 8.10536 11.2652 8 11 8C10.7348 8 10.4804 8.10536 10.2929 8.29289C10.1054 8.48043 10 8.73478 10 9V15C10 15.2652 10.1054 15.5196 10.2929 15.7071C10.4804 15.8946 10.7348 16 11 16Z"
+										></path>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div data-v-11d5ccc8="" class="cart-section__item-price">
+							<div data-v-11d5ccc8="" class="price">
+								<!---->
+								<div data-v-11d5ccc8="" class="price__main">2 399 000 сум</div>
+							</div>
+							<div data-v-11d5ccc8="" class="product-card__bonus _empty" style="height: 24px;"></div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
 </div>
-
 {% endblock content %}
